@@ -1,0 +1,14 @@
+[
+  {
+    "scenario": "valid admin login",
+    "usernameKey": "username",
+    "passwordKey": "password",
+    "valid": "true"
+  },
+  {
+    "scenario": "invalid password login",
+    "usernameKey": "username",
+    "passwordKey": "invalidPassword",
+    "valid": "false"
+  }
+]

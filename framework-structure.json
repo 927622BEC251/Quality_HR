@@ -1,0 +1,112 @@
+{
+  "projectName": "QualityHR_Automation_Framework",
+  "framework": {
+    "language": "Java",
+    "automationTool": "Selenium WebDriver",
+    "testFramework": "TestNG",
+    "designPattern": "Page Object Model",
+    "buildTool": "Maven",
+    "reporting": "ExtentReports",
+    "driverManagement": "WebDriverManager"
+  },
+  "application": {
+    "name": "OrangeHRM",
+    "urlConfigKey": "baseUrl",
+    "credentialsSource": "src/test/resources/config/config.properties"
+  },
+  "folderStructure": {
+    "src/main/java/base": [
+      "BasePage.java",
+      "BaseTest.java"
+    ],
+    "src/main/java/pages": [
+      "LoginPage.java",
+      "DashboardPage.java",
+      "EmployeePage.java",
+      "LeavePage.java",
+      "AdminPage.java",
+      "MyInfoPage.java"
+    ],
+    "src/main/java/utilities": [
+      "DriverFactory.java",
+      "ConfigReader.java",
+      "WaitUtils.java",
+      "ExtentManager.java",
+      "ScreenshotUtils.java",
+      "JsonDataReader.java"
+    ],
+    "src/main/java/listeners": [
+      "TestListener.java"
+    ],
+    "src/test/java/tests": [
+      "LoginTest.java",
+      "DashboardTest.java",
+      "EmployeeTest.java",
+      "LeaveTest.java",
+      "AdminTest.java",
+      "MyInfoTest.java",
+      "ValidationTest.java"
+    ],
+    "src/test/resources/config": [
+      "config.properties"
+    ],
+    "src/test/resources/testdata": [
+      "loginData.json",
+      "employeeData.json",
+      "leaveData.json"
+    ],
+    "rootFiles": [
+      "pom.xml",
+      "testng.xml",
+      "README.md"
+    ],
+    "runtimeOutput": [
+      "reports/QualityHR_ExtentReport.html",
+      "screenshots/*.png"
+    ]
+  },
+  "testCases": {
+    "authentication": [
+      "Valid login with admin credentials",
+      "Invalid login error message",
+      "Logout redirects to login page",
+      "Empty username and password required validation"
+    ],
+    "employeeManagement": [
+      "Add employee",
+      "Search employee",
+      "Open employee record",
+      "Invalid employee search shows no result"
+    ],
+    "leaveManagement": [
+      "Leave module loads",
+      "Apply leave",
+      "Leave list contains records",
+      "Past date leave validation"
+    ],
+    "userRoleManagement": [
+      "Create ESS user",
+      "Search created user",
+      "Delete created user",
+      "Verify deleted user is absent"
+    ],
+    "formValidations": [
+      "Add Employee mandatory fields",
+      "Invalid date format",
+      "Leave type dropdown selectable"
+    ],
+    "dashboardAndMyInfo": [
+      "Dashboard menu items visible",
+      "Dashboard user dropdown visible",
+      "My Info page loads",
+      "My Info name fields visible",
+      "My Info gender options available"
+    ]
+  },
+  "executionCommand": "mvn test",
+  "executionMode": {
+    "browser": "chrome",
+    "parallel": false,
+    "reason": "Sequential execution is used for stable runs against the shared live demo site."
+  }
+}
