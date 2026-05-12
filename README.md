@@ -66,4 +66,7 @@ Failure screenshots are saved under:
 
 ```text
 screenshots/
+
+<img width="1920" height="905" alt="verifyAddEmployeeMandatoryFieldValidation_20260509_100831" src="https://github.com/user-attachments/assets/883d87a9-830b-4c3f-950d-f0551f9ef5c8" />
+
 ```
